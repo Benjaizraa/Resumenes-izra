@@ -1,106 +1,55 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Resúmenes de Benja</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
-      text-align: center;
-      padding: 30px;
-    }
-
-    .container {
-      background: white;
-      border-radius: 10px;
-      padding: 20px;
-      max-width: 600px;
-      margin: auto;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    button {
-      padding: 10px 20px;
-      margin: 10px;
-      background: #28a745;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    input {
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      margin-top: 10px;
-    }
-
-    .resumen {
-      border: 1px solid #ddd;
-      padding: 15px;
-      margin-top: 15px;
-      border-radius: 8px;
-      text-align: left;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resumenes Izra</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <header>
+    <img src="img/logo.png" alt="Logo Resúmenes Izra" class="logo" />
+    <h1>Resúmenes Izra</h1>
+    <nav>
+      <ul>
+        <li><a href="#lengua">Lengua</a></li>
+        <li><a href="#historia">Historia</a></li>
+        <li><a href="#geografia">Geografía</a></li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="container">
-    <h2>Acceso a los Resúmenes</h2>
-    <p>Ingresá el código para entrar:</p>
-    <input type="password" id="codigoInput" placeholder="Código de acceso">
-    <br>
-    <button onclick="verificarCodigo()">Ingresar</button>
-
-    <div id="resumenesSection" class="hidden">
-      <h3>Resúmenes disponibles</h3>
-
-      <div class="resumen">
-        <h4>Resumen de Historia - Revolución Francesa</h4>
-        <p>Un resumen claro y corto de los principales hechos de la Revolución.</p>
-        <button onclick="comprar('Historia - Revolución Francesa')">Comprar</button>
+  <main>
+    <section id="lengua">
+      <h2>Lengua</h2>
+      <div class="resumen-card">
+        <h3>La Cautiva</h3>
+        <p>Resumen del poema "La Cautiva" con recursos poéticos y análisis.</p>
+        <a href="resumenes/lengua/cautiva.pdf" target="_blank">Ver PDF</a>
       </div>
+    </section>
 
-      <div class="resumen">
-        <h4>Resumen de Literatura - El Quijote</h4>
-        <p>Resumen del argumento, personajes y temas principales de la obra.</p>
-        <button onclick="comprar('Literatura - El Quijote')">Comprar</button>
+    <section id="historia">
+      <h2>Historia</h2>
+      <div class="resumen-card">
+        <h3>Independencia de Brasil</h3>
+        <p>Resumen claro y breve de los eventos clave de la independencia brasileña.</p>
+        <a href="resumenes/historia/independencia-brasil.pdf" target="_blank">Ver PDF</a>
       </div>
+    </section>
 
-      <div class="resumen">
-        <h4>Resumen de Geografía - Continentes</h4>
-        <p>Mapa mental de los continentes y sus características más importantes.</p>
-        <button onclick="comprar('Geografía - Continentes')">Comprar</button>
+    <section id="geografia">
+      <h2>Geografía</h2>
+      <div class="resumen-card">
+        <h3>Población y Migración</h3>
+        <p>Resumen sobre la distribución, crecimiento poblacional y tipos de migración.</p>
+        <a href="resumenes/geografia/poblacion-migracion.pdf" target="_blank">Ver PDF</a>
       </div>
-    </div>
-  </div>
+    </section>
+  </main>
 
-  <script>
-    const codigoCorrecto = "1234";
-
-    function verificarCodigo() {
-      const codigoIngresado = document.getElementById("codigoInput").value;
-      if (codigoIngresado === codigoCorrecto) {
-        document.getElementById("resumenesSection").classList.remove("hidden");
-      } else {
-        alert("Código incorrecto. Probá de nuevo.");
-      }
-    }
-
-    function comprar(nombreResumen) {
-      alert("Gracias por comprar el resumen de: " + nombreResumen + ". Te lo vamos a enviar por mail o WhatsApp.");
-    }
-  </script>
-
+  <footer>
+    <p>&copy; 2025 Resúmenes Izra. Hecho por Benjamín Izraelson.</p>
+  </footer>
 </body>
-
 </html>
